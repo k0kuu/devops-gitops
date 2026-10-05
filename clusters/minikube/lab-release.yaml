@@ -19,7 +19,7 @@ spec:
   driftDetection:
     mode: enabled
   values:
-    replicaCount: 3
+    replicaCount: 2
     appVersion: "39d86807f2dbfe7d6a012b5aee848e526eff68e7"
     image:
       repository: "ghcr.io/k0kuu/devops-lab"
