@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: devops-lab
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/k0kuu/devops-gitops.git
+    targetRevision: main
+    path: charts/devops-lab
+    helm:
+      releaseName: lab
+      values: |
+        replicaCount: 2
+        appVersion: "e1bec1574ed537b817bcef0c78cd6dfe0be30353"
+        image:
+          repository: "ghcr.io/k0kuu/devops-lab"
+          tag: "e1bec1574ed537b817bcef0c78cd6dfe0be30353"
+        serviceMonitor:
+          enabled: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: lab-argo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
