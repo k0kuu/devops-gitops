@@ -20,9 +20,9 @@ spec:
     mode: enabled
   values:
     replicaCount: 2
-    appVersion: "9a655b06bcb6bc6c0698b1ef7336e2213976456a"
+    appVersion: "e1bec1574ed537b817bcef0c78cd6dfe0be30353"
     image:
       repository: "ghcr.io/k0kuu/devops-lab"
-      tag: "9a655b06bcb6bc6c0698b1ef7336e2213976456a"
+      tag: "e1bec1574ed537b817bcef0c78cd6dfe0be30353"
     serviceMonitor:
       enabled: true
