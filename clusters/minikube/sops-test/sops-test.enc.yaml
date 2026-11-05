@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  BAZ: cXV4
+  FOO: YmFy
+kind: Secret
+metadata:
+  name: sops-test
