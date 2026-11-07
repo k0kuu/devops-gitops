@@ -4,3 +4,4 @@ resources:
   - ./flux-system
   - ./lab-release.yaml
   - ./sops-test
+  - ./monitoring
