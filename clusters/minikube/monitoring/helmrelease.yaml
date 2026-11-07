@@ -6,7 +6,9 @@ metadata:
 spec:
   interval: 5m
   releaseName: monitoring
-  targetNamespace: monitoring        
+  targetNamespace: monitoring   
+  install:
+    createNamespace: true 
   chart:
     spec:
       chart: kube-prometheus-stack   
